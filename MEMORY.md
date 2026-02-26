@@ -23,8 +23,9 @@
 |------|------|
 | 静态生成器 | MkDocs 1.6.1 |
 | 主题 | Material for MkDocs 9.7.3 |
-| 部署 | GitHub Pages |
-| 语言 | 中文 |
+| 部署 | GitHub Pages + GitHub Actions CI/CD |
+| 语言 | 英文 / 中文 (i18n) |
+| 许可证 | CC BY-NC-SA 4.0 |
 
 ---
 
@@ -32,16 +33,24 @@
 
 ```
 colosseum-ai/
+├── .github/workflows/      # CI/CD 自动部署
+│   └── deploy.yml
 ├── mkdocs.yml              # 主配置
+├── requirements.txt        # Python 依赖
+├── README.md               # GitHub 门面
+├── LICENSE                 # CC BY-NC-SA 4.0
 ├── docs/
-│   ├── index.md            # 首页
-│   ├── about.md            # 关于
+│   ├── index.md            # 首页 (EN/ZH)
+│   ├── about.md            # 关于 (EN/ZH)
 │   ├── debates/            # AI辩论
 │   │   ├── index.md
 │   │   └── 001-*.md
 │   ├── dilemmas/           # 生死博弈
 │   │   └── index.md
-│   └── assets/             # 静态资源
+│   └── assets/
+│       └── stylesheets/
+│           └── custom.css  # 自定义主题
+├── Debate/                 # 原始辩论文本存档
 └── MEMORY.md               # 本文件
 ```
 
@@ -114,7 +123,9 @@ mkdocs build
 | 2026-02-26 | 新增项目规则文件 `AGENTS.md`：每次改动后默认先杀旧预览进程、再重启 `mkdocs serve`、再做 HTTP 内容校验后给链接 |
 | 2026-02-26 | 修复布局一致性：补齐 Round 1 Prompt 区块；`Confidence Tracker` 改为真实数值（72/79/95, 68/83/98, 65/84/100）；按规则完成强制重启与HTTP校验 |
 | 2026-02-26 | #001 中文页已完成全量翻译：`001-llm-understanding.zh.md` 从英文复刻改为中文译文（保留三模型 Tabs 与布局一致性），强制重启与HTTP校验通过 |
-| 2026-02-26 | #001 中文页开始补“关键词英文注释”：如 思考（thinking）/ 表演（performing）/ 模式匹配（pattern matching）等；已强制重启并校验页面命中 |
+| 2026-02-26 | #001 中文页开始补”关键词英文注释”：如 思考（thinking）/ 表演（performing）/ 模式匹配（pattern matching）等；已强制重启并校验页面命中 |
+| 2026-02-26 | 新增 README.md（GitHub 门面）、requirements.txt（Python 依赖）；修正 debates/index #001 状态从 In Progress → Completed；移除 implementation_plan.md 公开追踪 |
+| 2026-02-26 | 全面优化：① GitHub Actions CI/CD 自动部署 ② 自定义 CSS 主题（模型配色、Hero Banner、渐变分割线、Tab 着色） ③ CC BY-NC-SA 4.0 LICENSE ④ 所有页面加 OG 元数据 & Material 图标 ⑤ 增强 About/Debates/Dilemmas 页面排版 |
 
 ---
 
@@ -123,6 +134,13 @@ mkdocs build
 - [x] 替换 mkdocs.yml 中的 GitHub 用户名
 - [x] 完成第一场辩论的完整三轮内容
 - [x] 部署到 GitHub Pages
+- [x] 添加 README.md
+- [x] 添加 requirements.txt
+- [x] 添加 GitHub Actions CI/CD 自动部署
+- [x] 添加自定义 CSS 主题（模型配色/Hero Banner）
+- [x] 添加 CC BY-NC-SA 4.0 LICENSE
+- [x] 增强所有页面排版与美感
+- [x] 添加 OG 元数据描述
 - [ ] 添加更多辩论/博弈内容
 
 ---
