@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://peter941221.github.io/colosseum-ai/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://peter941221.github.io/colosseum-ai/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://peter941221.github.io/colosseum-ai/zh/"/>
+    </url>
+    <url>
+        <loc>https://peter941221.github.io/colosseum-ai/about/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://peter941221.github.io/colosseum-ai/about/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://peter941221.github.io/colosseum-ai/zh/about/"/>
+    </url>
+    <url>
+        <loc>https://peter941221.github.io/colosseum-ai/debates/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://peter941221.github.io/colosseum-ai/debates/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://peter941221.github.io/colosseum-ai/zh/debates/"/>
+    </url>
+    <url>
+        <loc>https://peter941221.github.io/colosseum-ai/debates/001-llm-understanding/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://peter941221.github.io/colosseum-ai/debates/001-llm-understanding/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://peter941221.github.io/colosseum-ai/zh/debates/001-llm-understanding/"/>
+    </url>
+    <url>
+        <loc>https://peter941221.github.io/colosseum-ai/dilemmas/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://peter941221.github.io/colosseum-ai/dilemmas/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://peter941221.github.io/colosseum-ai/zh/dilemmas/"/>
+    </url>
+    <url>
+        <loc>https://peter941221.github.io/colosseum-ai/zh/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://peter941221.github.io/colosseum-ai/zh/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://peter941221.github.io/colosseum-ai/"/>
+    </url>
+    <url>
+        <loc>https://peter941221.github.io/colosseum-ai/zh/about/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://peter941221.github.io/colosseum-ai/zh/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://peter941221.github.io/colosseum-ai/about/"/>
+    </url>
+    <url>
+        <loc>https://peter941221.github.io/colosseum-ai/zh/debates/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://peter941221.github.io/colosseum-ai/zh/debates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://peter941221.github.io/colosseum-ai/debates/"/>
+    </url>
+    <url>
+        <loc>https://peter941221.github.io/colosseum-ai/zh/debates/001-llm-understanding/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://peter941221.github.io/colosseum-ai/zh/debates/001-llm-understanding/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://peter941221.github.io/colosseum-ai/debates/001-llm-understanding/"/>
+    </url>
+    <url>
+        <loc>https://peter941221.github.io/colosseum-ai/zh/dilemmas/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://peter941221.github.io/colosseum-ai/zh/dilemmas/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://peter941221.github.io/colosseum-ai/dilemmas/"/>
+    </url>
+</urlset>

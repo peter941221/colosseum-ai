@@ -1,0 +1,256 @@
+/* ═══════════════════════════════════════════════════════════
+   Colosseum AI — Custom Theme
+   Three AIs, One Arena, No Standard Answers
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Root Variables ────────────────────────────────────── */
+:root {
+  --claude-purple: #7c3aed;
+  --claude-purple-light: #a78bfa;
+  --claude-purple-glow: rgba(124, 58, 237, 0.15);
+  --claude-purple-bg: rgba(124, 58, 237, 0.08);
+  --gpt-green: #10b981;
+  --gpt-green-light: #6ee7b7;
+  --gpt-green-glow: rgba(16, 185, 129, 0.15);
+  --gpt-green-bg: rgba(16, 185, 129, 0.08);
+  --gemini-blue: #3b82f6;
+  --gemini-blue-light: #93c5fd;
+  --gemini-blue-glow: rgba(59, 130, 246, 0.15);
+  --gemini-blue-bg: rgba(59, 130, 246, 0.08);
+  --arena-gold: #f59e0b;
+  --arena-gold-light: #fcd34d;
+}
+
+/* ── Hero Banner (Homepage) ────────────────────────────── */
+.md-content .hero-banner {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg,
+    rgba(124, 58, 237, 0.12) 0%,
+    rgba(59, 130, 246, 0.10) 50%,
+    rgba(16, 185, 129, 0.12) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-md-color-scheme="default"] .hero-banner {
+  background: linear-gradient(135deg,
+    rgba(124, 58, 237, 0.06) 0%,
+    rgba(59, 130, 246, 0.05) 50%,
+    rgba(16, 185, 129, 0.06) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.hero-banner h1 {
+  font-size: 2.4rem !important;
+  margin-bottom: 0.3rem !important;
+  letter-spacing: 0.02em;
+}
+
+.hero-banner .hero-tagline {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  font-style: italic;
+  margin-bottom: 0.8rem;
+}
+
+.hero-banner .hero-models {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-banner .model-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.model-badge.claude {
+  background: var(--claude-purple-bg);
+  border: 1.5px solid var(--claude-purple-light);
+  color: var(--claude-purple-light);
+}
+
+.model-badge.gpt {
+  background: var(--gpt-green-bg);
+  border: 1.5px solid var(--gpt-green-light);
+  color: var(--gpt-green-light);
+}
+
+.model-badge.gemini {
+  background: var(--gemini-blue-bg);
+  border: 1.5px solid var(--gemini-blue-light);
+  color: var(--gemini-blue-light);
+}
+
+[data-md-color-scheme="default"] .model-badge.claude {
+  color: var(--claude-purple);
+}
+[data-md-color-scheme="default"] .model-badge.gpt {
+  color: var(--gpt-green);
+}
+[data-md-color-scheme="default"] .model-badge.gemini {
+  color: var(--gemini-blue);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Tab Styling — Model Response Tabs
+
+   Material for MkDocs uses hidden <input> + sibling selector:
+     input:nth-child(N):checked ~ .tabbed-labels > :nth-child(N)
+
+   NOT .active class. Must use correct selectors.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Unselected Tabs: dim and no visible border ────────── */
+.md-typeset .tabbed-labels > label {
+  opacity: 0.45;
+  border-bottom: 0.15rem solid transparent !important;
+  transition: all 0.25s ease;
+}
+
+/* ── Hover: medium brightness ──────────────────────────── */
+.md-typeset .tabbed-labels > label:hover {
+  opacity: 0.75;
+}
+
+/* ── Selected Tab 1 (Claude): purple ───────────────────── */
+.md-typeset .tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > :nth-child(1) {
+  color: var(--claude-purple-light) !important;
+  border-bottom: 0.15rem solid var(--claude-purple) !important;
+  background: var(--claude-purple-glow);
+  border-radius: 4px 4px 0 0;
+  opacity: 1;
+}
+
+/* ── Selected Tab 2 (GPT): green ───────────────────────── */
+.md-typeset .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > :nth-child(2) {
+  color: var(--gpt-green-light) !important;
+  border-bottom: 0.15rem solid var(--gpt-green) !important;
+  background: var(--gpt-green-glow);
+  border-radius: 4px 4px 0 0;
+  opacity: 1;
+}
+
+/* ── Selected Tab 3 (Gemini): blue ─────────────────────── */
+.md-typeset .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > :nth-child(3) {
+  color: var(--gemini-blue-light) !important;
+  border-bottom: 0.15rem solid var(--gemini-blue) !important;
+  background: var(--gemini-blue-glow);
+  border-radius: 4px 4px 0 0;
+  opacity: 1;
+}
+
+/* ── Light mode: use darker text for selected tabs ─────── */
+[data-md-color-scheme="default"] .tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > :nth-child(1) {
+  color: var(--claude-purple) !important;
+}
+[data-md-color-scheme="default"] .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > :nth-child(2) {
+  color: var(--gpt-green) !important;
+}
+[data-md-color-scheme="default"] .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > :nth-child(3) {
+  color: var(--gemini-blue) !important;
+}
+
+/* ── Confidence Tracker Table ──────────────────────────── */
+.md-typeset table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.md-typeset table thead th {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+/* ── Blockquote / Prompt Styling ───────────────────────── */
+.md-typeset blockquote {
+  border-left: 3px solid var(--arena-gold);
+  padding: 0.6rem 1rem;
+  border-radius: 0 6px 6px 0;
+  background: rgba(245, 158, 11, 0.06);
+  font-style: italic;
+}
+
+[data-md-color-scheme="default"] .md-typeset blockquote {
+  background: rgba(245, 158, 11, 0.04);
+}
+
+/* ── Section Dividers ──────────────────────────────────── */
+.md-typeset hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--claude-purple) 20%,
+    var(--arena-gold) 50%,
+    var(--gemini-blue) 80%,
+    transparent 100%);
+  opacity: 0.4;
+  margin: 2rem 0;
+}
+
+/* ── Admonition Enhancements ───────────────────────────── */
+.md-typeset .admonition {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+/* ── Footer ────────────────────────────────────────────── */
+.md-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Status Badges in Tables ───────────────────────────── */
+.md-typeset table td:last-child {
+  white-space: nowrap;
+}
+
+/* ── Smooth Transitions ────────────────────────────────── */
+.md-typeset a {
+  transition: color 0.2s ease;
+}
+
+/* ── Navigation Tab Enhancements ───────────────────────── */
+.md-tabs__link {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* ── Content Width & Readability ───────────────────────── */
+.md-typeset {
+  line-height: 1.75;
+}
+
+.md-typeset p {
+  margin-bottom: 0.8em;
+}
+
+/* ── Mobile Responsiveness ─────────────────────────────── */
+@media (max-width: 600px) {
+  .hero-banner h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-banner .hero-models {
+    gap: 0.8rem;
+  }
+
+  .model-badge {
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.6rem !important;
+  }
+}
