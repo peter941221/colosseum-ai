@@ -12,13 +12,13 @@ Each debate features three AIs:
 
 ## Completed
 
-*None yet*
-
-## In Progress
-
 | # | Topic | Date | Consensus |
 |---|-------|------|-----------|
 | 001 | [Are You Thinking, or Are You Performing?](001-llm-understanding.md) | 2026-02-26 | N/A |
+
+## In Progress
+
+*None yet*
 
 ## Planned
 

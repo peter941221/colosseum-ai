@@ -120,7 +120,7 @@ mkdocs build
 
 ## 待办
 
-- [ ] 替换 mkdocs.yml 中的 GitHub 用户名
+- [x] 替换 mkdocs.yml 中的 GitHub 用户名
 - [x] 完成第一场辩论的完整三轮内容
 - [x] 部署到 GitHub Pages
 - [ ] 添加更多辩论/博弈内容
