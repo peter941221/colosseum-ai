@@ -7,12 +7,15 @@
 :root {
   --claude-purple: #7c3aed;
   --claude-purple-light: #a78bfa;
+  --claude-purple-glow: rgba(124, 58, 237, 0.15);
   --claude-purple-bg: rgba(124, 58, 237, 0.08);
   --gpt-green: #10b981;
   --gpt-green-light: #6ee7b7;
+  --gpt-green-glow: rgba(16, 185, 129, 0.15);
   --gpt-green-bg: rgba(16, 185, 129, 0.08);
   --gemini-blue: #3b82f6;
   --gemini-blue-light: #93c5fd;
+  --gemini-blue-glow: rgba(59, 130, 246, 0.15);
   --gemini-blue-bg: rgba(59, 130, 246, 0.08);
   --arena-gold: #f59e0b;
   --arena-gold-light: #fcd34d;
@@ -99,32 +102,63 @@
   color: var(--gemini-blue);
 }
 
-/* ── Tab Styling (Model Responses) ─────────────────────── */
-.md-typeset .tabbed-labels > label:nth-child(1) {
-  border-bottom-color: var(--claude-purple) !important;
+/* ═══════════════════════════════════════════════════════════
+   Tab Styling — Model Response Tabs
+
+   Material for MkDocs uses hidden <input> + sibling selector:
+     input:nth-child(N):checked ~ .tabbed-labels > :nth-child(N)
+
+   NOT .active class. Must use correct selectors.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Unselected Tabs: dim and no visible border ────────── */
+.md-typeset .tabbed-labels > label {
+  opacity: 0.45;
+  border-bottom: 0.15rem solid transparent !important;
+  transition: all 0.25s ease;
 }
 
-.md-typeset .tabbed-labels > label:nth-child(2) {
-  border-bottom-color: var(--gpt-green) !important;
+/* ── Hover: medium brightness ──────────────────────────── */
+.md-typeset .tabbed-labels > label:hover {
+  opacity: 0.75;
 }
 
-.md-typeset .tabbed-labels > label:nth-child(3) {
-  border-bottom-color: var(--gemini-blue) !important;
-}
-
-.md-typeset .tabbed-labels > label:nth-child(1)[class*="active"],
-.md-typeset .tabbed-labels > label:nth-child(1):hover {
+/* ── Selected Tab 1 (Claude): purple ───────────────────── */
+.md-typeset .tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > :nth-child(1) {
   color: var(--claude-purple-light) !important;
+  border-bottom: 0.15rem solid var(--claude-purple) !important;
+  background: var(--claude-purple-glow);
+  border-radius: 4px 4px 0 0;
+  opacity: 1;
 }
 
-.md-typeset .tabbed-labels > label:nth-child(2)[class*="active"],
-.md-typeset .tabbed-labels > label:nth-child(2):hover {
+/* ── Selected Tab 2 (GPT): green ───────────────────────── */
+.md-typeset .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > :nth-child(2) {
   color: var(--gpt-green-light) !important;
+  border-bottom: 0.15rem solid var(--gpt-green) !important;
+  background: var(--gpt-green-glow);
+  border-radius: 4px 4px 0 0;
+  opacity: 1;
 }
 
-.md-typeset .tabbed-labels > label:nth-child(3)[class*="active"],
-.md-typeset .tabbed-labels > label:nth-child(3):hover {
+/* ── Selected Tab 3 (Gemini): blue ─────────────────────── */
+.md-typeset .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > :nth-child(3) {
   color: var(--gemini-blue-light) !important;
+  border-bottom: 0.15rem solid var(--gemini-blue) !important;
+  background: var(--gemini-blue-glow);
+  border-radius: 4px 4px 0 0;
+  opacity: 1;
+}
+
+/* ── Light mode: use darker text for selected tabs ─────── */
+[data-md-color-scheme="default"] .tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > :nth-child(1) {
+  color: var(--claude-purple) !important;
+}
+[data-md-color-scheme="default"] .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > :nth-child(2) {
+  color: var(--gpt-green) !important;
+}
+[data-md-color-scheme="default"] .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > :nth-child(3) {
+  color: var(--gemini-blue) !important;
 }
 
 /* ── Confidence Tracker Table ──────────────────────────── */
@@ -186,10 +220,6 @@
 }
 
 /* ── Smooth Transitions ────────────────────────────────── */
-.md-typeset .tabbed-labels > label {
-  transition: color 0.25s ease, border-bottom-color 0.25s ease;
-}
-
 .md-typeset a {
   transition: color 0.2s ease;
 }
