@@ -122,7 +122,7 @@ mkdocs build
 
 - [ ] 替换 mkdocs.yml 中的 GitHub 用户名
 - [x] 完成第一场辩论的完整三轮内容
-- [ ] 部署到 GitHub Pages
+- [x] 部署到 GitHub Pages
 - [ ] 添加更多辩论/博弈内容
 
 ---
@@ -135,3 +135,10 @@ mkdocs build
 - 本机已配置窗口托盘工具 RBTray：右键点击窗口最小化按钮可最小化到托盘。
 - 发布后强制校验：1) 仅保留一个 `mkdocs serve` 实例；2) 用 HTTP 抓取页面并检查关键标题，确认不是旧内容。
 - 内容规则：用户提供辩论原文时，仅做必要排版（如 Tabs 缩进），不增加风格解读、人物设定或额外文案。
+
+---
+
+## 部署信息
+
+- 仓库（GitHub Repo）：`https://github.com/peter941221/colosseum-ai`
+- 线上地址（GitHub Pages）：`https://peter941221.github.io/colosseum-ai/`（中文：`/zh/`）
