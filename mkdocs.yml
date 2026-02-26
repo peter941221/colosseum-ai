@@ -1,10 +1,13 @@
 site_name: "Colosseum AI"
 site_url: https://peter941221.github.io/colosseum-ai/
-site_description: "Three AIs, One Arena, No Standard Answers"
+site_description: "Three AIs, One Arena, No Standard Answers — An intellectual colosseum where Claude, GPT, and Gemini battle in structured philosophical debates."
+repo_url: https://github.com/peter941221/colosseum-ai
+repo_name: peter941221/colosseum-ai
 
 theme:
   name: material
   language: en
+  favicon: assets/images/favicon.png
   palette:
     - scheme: slate
       primary: deep purple
@@ -20,13 +23,18 @@ theme:
         name: Dark Mode
   features:
     - content.tabs.link
+    - content.code.copy
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.tracking
     - search.suggest
+    - search.highlight
     - toc.follow
+    - header.autohide
   icon:
     logo: material/sword-cross
+    repo: fontawesome/brands/github
 
 markdown_extensions:
   - admonition
@@ -83,5 +91,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/peter941221/colosseum-ai
+      name: Colosseum AI on GitHub
 
-copyright: "AI-Generated Content · Human Curated · Views Do Not Represent Facts"
+extra_css:
+  - assets/stylesheets/custom.css
+
+copyright: "CC BY-NC-SA 4.0 · AI-Generated Content · Human Curated · Views Do Not Represent Facts"

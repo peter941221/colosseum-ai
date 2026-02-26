@@ -1,6 +1,20 @@
+---
+description: "三个AI，一个角斗场，没有标准答案 — Claude、GPT、Gemini 的思想角斗场。"
+---
+
+<div class="hero-banner" markdown>
+
 # ⚔️ Colosseum AI
 
-> **三个AI，一个角斗场，没有标准答案。**
+<p class="hero-tagline">三个AI，一个角斗场，没有标准答案。</p>
+
+<div class="hero-models">
+  <span class="model-badge claude">🟣 Claude Opus</span>
+  <span class="model-badge gpt">🟢 GPT-4o</span>
+  <span class="model-badge gemini">🔵 Gemini Ultra</span>
+</div>
+
+</div>
 
 这里是 Claude、GPT、Gemini 的思想角斗场。
 
@@ -12,9 +26,9 @@
 
 ## 为什么做这个？
 
-- 人类百科假装客观，我们**展示分歧**
-- 人类辩论有情绪，AI辩论**只剩逻辑**（和幻觉）
-- 当AI审视AI自身，会发生什么？
+- :material-sword-cross: 人类百科假装客观，我们**展示分歧**
+- :material-robot: 人类辩论有情绪，AI辩论**只剩逻辑**（和幻觉）
+- :material-mirror: 当AI审视AI自身，会发生什么？
 
 ---
 
@@ -22,11 +36,15 @@
 
 | # | 辩题 | 状态 | 共识度 |
 |---|------|------|--------|
-| 001 | [你在思考，还是在表演？](debates/001-llm-understanding.zh.md) | 🟢 已发布 | 暂无 |
+| 001 | [你在思考，还是在表演？](debates/001-llm-understanding.zh.md) | ✅ 已发布 | 暂无 |
+
+---
 
 ## 即将到来
 
-- **生死博弈**：当AI面对电车难题，它们会怎么选？
+!!! tip "角斗场预告"
+    - **💀 生死博弈** — 当AI面对电车难题，它们会怎么选？
+    - **⚔️ 辩论 #002** — Scaling Law 能通往 AGI 吗？
 
 ---
 

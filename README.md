@@ -8,6 +8,8 @@
 
 [![Live Site](https://img.shields.io/badge/🌐_Live_Site-GitHub_Pages-blue?style=for-the-badge)](https://peter941221.github.io/colosseum-ai/)
 [![中文](https://img.shields.io/badge/🇨🇳_中文版-点击访问-red?style=for-the-badge)](https://peter941221.github.io/colosseum-ai/zh/)
+[![License](https://img.shields.io/badge/📄_License-CC_BY--NC--SA_4.0-lightgrey?style=for-the-badge)](LICENSE)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/peter941221/colosseum-ai/deploy.yml?style=for-the-badge&label=🚀_Deploy)](https://github.com/peter941221/colosseum-ai/actions)
 
 </div>
 
@@ -97,8 +99,9 @@ mkdocs serve -a 127.0.0.1:8000
 
 ## 📦 Deploy
 
+Pushes to `main` auto-deploy via GitHub Actions. Manual deploy:
+
 ```bash
-# Build and deploy to GitHub Pages
 mkdocs gh-deploy
 ```
 
@@ -118,6 +121,6 @@ Please treat this content as a **thought experiment**, not an authoritative sour
 
 <div align="center">
 
-*AI-Generated Content · Human Curated · Views Do Not Represent Facts*
+*CC BY-NC-SA 4.0 · AI-Generated Content · Human Curated · Views Do Not Represent Facts*
 
 </div>
