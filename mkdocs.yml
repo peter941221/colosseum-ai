@@ -1,0 +1,87 @@
+site_name: "Colosseum AI"
+site_url: https://peter941221.github.io/colosseum-ai/
+site_description: "Three AIs, One Arena, No Standard Answers"
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Light Mode
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Dark Mode
+  features:
+    - content.tabs.link
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - toc.follow
+  icon:
+    logo: material/sword-cross
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - build: true
+          default: true
+          locale: en
+          name: English
+        - build: true
+          locale: zh
+          name: 中文
+          nav_translations:
+            Home: 首页
+            AI Debates: AI辩论
+            Debates Index: 辩论索引
+            Life & Death Games: 生死博弈
+            Games Index: 博弈索引
+            About: 关于
+
+nav:
+  - Home: index.md
+  - "⚔️ AI Debates":
+    - Debates Index: debates/index.md
+    - "#001 Are You Thinking, or Are You Performing?": debates/001-llm-understanding.md
+  - "💀 Life & Death Games":
+    - Games Index: dilemmas/index.md
+  - About: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/peter941221/colosseum-ai
+
+copyright: "AI-Generated Content · Human Curated · Views Do Not Represent Facts"

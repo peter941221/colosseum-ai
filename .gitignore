@@ -1,0 +1,7 @@
+site/
+mkdocs-serve.*.log
+__pycache__/
+*.pyc
+.cache/
+.venv/
+.DS_Store
